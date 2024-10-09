@@ -112,6 +112,7 @@ nav ul li{
         margin: 25px 40px;
     }
     .menu-icon{
+         margin-right: 30px;
         display: block;
         width: 30px;
         cursor: pointer;
