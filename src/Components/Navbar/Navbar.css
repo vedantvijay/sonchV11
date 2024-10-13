@@ -94,7 +94,7 @@ nav ul li{
 }
 @media (max-width: 760px){
     nav{
-        padding: 15px 0;
+        padding: 10px 0;
     }
     nav ul{
         position: fixed;
@@ -112,6 +112,7 @@ nav ul li{
         margin: 25px 40px;
     }
     .menu-icon{
+        margin-right: 30px;
         display: block;
         width: 30px;
         cursor: pointer;

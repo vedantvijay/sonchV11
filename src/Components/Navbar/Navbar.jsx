@@ -107,7 +107,7 @@ const Navbar = () => {
           </li>
           <li><Link to="/campus" onClick={handleNavItemClick}>Keyprojects</Link></li>
           <li><Link to="/campus" onClick={handleNavItemClick}>Campus</Link></li>
-          <li><Link to="/testimonials" onClick={handleNavItemClick}>Testimonials</Link></li>
+          <li><Link to="/sonch-in-news" onClick={handleNavItemClick}>Sonch in News</Link></li>
           <li className="dropdown">
            
           </li>

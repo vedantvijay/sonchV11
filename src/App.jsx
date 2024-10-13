@@ -13,7 +13,7 @@ import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
 import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
 import Gallery from './Components/Gallary/Gallery'
-
+import News from './Components/News/News'
 const App = () => {
   const [playState, setPlayState] = useState(false);
 
@@ -30,7 +30,8 @@ const App = () => {
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/focus" element={<Focus />} />
-            <Route path="/gallery" element={<GalleryPage/>} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/sonch-in-news" element={<NewsPage/>} />
           </Routes>
         </div>
         <Footer />
@@ -95,6 +96,12 @@ const GalleryPage = () => (
   <>
    
     <Gallery/>
+  </>
+)
+const NewsPage = () => (
+  <>
+   
+    <News/>
   </>
 )
 
