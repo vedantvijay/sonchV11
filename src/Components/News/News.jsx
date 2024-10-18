@@ -1,12 +1,19 @@
 import React from 'react'
 import './News.css'
+import { useNavigate } from 'react-router-dom';
 import gallery_1 from '../../assets/gallery-1.png'
 import gallery_2 from '../../assets/gallery-2.png'
 import gallery_3 from '../../assets/gallery-3.png'
 import gallery_4 from '../../assets/gallery-4.png'
 
+
 function SonchCard({ title, content, image }) {
-  console.log('Card props:', { title, content, image }); // Debugging log
+  const navigate = useNavigate();
+   const handleGalleryClick = () => {
+    navigate('/sonch-in-news/readmore'); // Route to the Gallery component
+  };
+  console.log('Card props:', { title, content, image });
+  // Debugging log
   return (
     <div className="sonch-card">
       <img 
@@ -19,7 +26,7 @@ function SonchCard({ title, content, image }) {
         <p className="sonch-card-text">
           {content}
         </p>
-        <button className="sonch-card-button">
+        <button className="sonch-card-button" onClick={handleGalleryClick}>
           Read More
         </button>
       </div>

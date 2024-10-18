@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import './About.css'
 
@@ -38,6 +38,8 @@ const AnimatedSection = ({ children, className }) => {
 }
 
 const About = () => {
+  const founderRef = useRef(null); // Create a ref for the founder section
+
   return (
     <div className="about-container">
       <AnimatedSection className="about">
@@ -67,7 +69,7 @@ const About = () => {
         <p><strong>SONCH</strong> has an interesting saga even before its advent. Much before the name and organisation CEED formalised for leading the transformative works in the Indo-Gangetic plain, a team of young, passionate and highly motivated professionals started a public awareness on renewable energy through 'Bihar Renewable Energy Development Support Network (BREDSN)' in Bihar in 2010, which for the first time in the state created buzz around cleaner energy, particularly solar, and its decentralised models with the aim to promote energy access and climate solutions.</p>
       </AnimatedSection>
 
-      <AnimatedSection className="founder">
+      <AnimatedSection className="founder" id="founder" ref={founderRef}>
         <div className="founder-content">
           <h3>ABOUT US</h3>
           <h2>Founder & Advisory Group</h2>

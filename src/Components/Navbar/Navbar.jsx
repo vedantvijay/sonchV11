@@ -18,7 +18,7 @@ const DonationModal = ({ isOpen, onClose }) => {
   );
 };
 
-const Navbar = () => {
+const Navbar = ({ founderRef }) => {
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -74,6 +74,12 @@ const Navbar = () => {
     setAboutDropdownOpen(false);
   }
 
+  const scrollToFounder = () => {
+    if (founderRef.current) {
+      founderRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <nav ref={navRef} className={`container ${sticky ? 'dark-nav' : ''}`}>
@@ -83,24 +89,19 @@ const Navbar = () => {
         <ul className={mobileMenu ? 'mobile-menu-active' : 'hide-mobile-menu'}>
           <li><Link to="/" onClick={handleNavItemClick}>Home</Link></li>
           <li className="dropdown">
-            
-            <Link className='dropbtn' to="/focus" onClick={handleNavItemClick}>FocusArea</Link>
+            <Link className='dropbtn' to="#" onClick={scrollToFounder}>Focus Area</Link> {/* Updated this line */}
             <div className="dropdown-content">
-             
               <Link to="/focus" onClick={handleNavItemClick}>Digital literacy</Link>
               <Link to="/focus" onClick={handleNavItemClick}>Women Empowerment</Link>
               <Link to="/focus" onClick={handleNavItemClick}>Institutional Building</Link>
-              
-
             </div>
-            
           </li>
           <li className="dropdown">
             <button className="dropbtn">About Us</button>
             <div className="dropdown-content">
               <Link to="/about" onClick={handleNavItemClick}>Our Organisation</Link>
               <Link to="/focus" onClick={handleNavItemClick}>Our Journey</Link>
-              <Link to="/focus-areas" onClick={handleNavItemClick}>Focus Areas</Link>
+              <Link to="#" onClick={scrollToFounder}>Founders</Link> {/* Updated this line */}
               <Link to="/focus-areas" onClick={handleNavItemClick}>Focus Areas</Link>
               <Link to="/focus-areas" onClick={handleNavItemClick}>Focus Areas</Link>
             </div>
