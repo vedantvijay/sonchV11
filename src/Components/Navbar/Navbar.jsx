@@ -4,6 +4,7 @@ import './Navbar.css'
 import logo from '../../assets/logo.png'
 import menu_icon from '../../assets/menu-icon.png'
 import qr_code from '../../assets/qr_code.png'
+'use client'
 
 const DonationModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -11,19 +12,18 @@ const DonationModal = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <img src={qr_code} alt="Donation QR Code" className="qr-code" />
+        <img src="/placeholder.svg?height=200&width=200" alt="Donation QR Code" className="qr-code" />
         <button onClick={onClose} className="close-button">Close</button>
       </div>
     </div>
   );
 };
 
-const Navbar = ({ founderRef }) => {
+export default function Component({ founderRef }) {
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
-  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const navRef = useRef(null);
   const location = useLocation();
 
@@ -35,6 +35,7 @@ const Navbar = ({ founderRef }) => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
         setMobileMenu(false);
+        setActiveDropdown(null);
       }
     };
 
@@ -49,6 +50,7 @@ const Navbar = ({ founderRef }) => {
 
   const toggleMenu = () => {
     setMobileMenu(!mobileMenu);
+    setActiveDropdown(null);
   }
 
   const openDonationModal = () => {
@@ -62,20 +64,15 @@ const Navbar = ({ founderRef }) => {
 
   const handleNavItemClick = () => {
     setMobileMenu(false);
+    setActiveDropdown(null);
   }
 
-  const toggleAboutDropdown = () => {
-    setAboutDropdownOpen(!aboutDropdownOpen);
-    setResourcesDropdownOpen(false);
-  }
-
-  const toggleResourcesDropdown = () => {
-    setResourcesDropdownOpen(!resourcesDropdownOpen);
-    setAboutDropdownOpen(false);
+  const toggleDropdown = (dropdown) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   }
 
   const scrollToFounder = () => {
-    if (founderRef.current) {
+    if (founderRef && founderRef.current) {
       founderRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
@@ -86,40 +83,34 @@ const Navbar = ({ founderRef }) => {
         <Link to="/">
           <img src={logo} alt="Logo" className="logo" />
         </Link>
-        <ul className={mobileMenu ? 'mobile-menu-active' : 'hide-mobile-menu'}>
+        <ul className={mobileMenu ? 'mobile-menu-active' : ''}>
           <li><Link to="/" onClick={handleNavItemClick}>Home</Link></li>
-          <li className="dropdown">
-            <Link className='dropbtn' to="#" onClick={scrollToFounder}>Focus Area</Link> {/* Updated this line */}
+          <li className={`dropdown ${activeDropdown === 'focus' ? 'active' : ''}`}>
+            <button className="dropbtn" onClick={() => toggleDropdown('focus')}>Focus Area</button>
             <div className="dropdown-content">
               <Link to="/focus" onClick={handleNavItemClick}>Digital literacy</Link>
               <Link to="/focus" onClick={handleNavItemClick}>Women Empowerment</Link>
               <Link to="/focus" onClick={handleNavItemClick}>Institutional Building</Link>
             </div>
           </li>
-          <li className="dropdown">
-            <button className="dropbtn">About Us</button>
+          <li className={`dropdown ${activeDropdown === 'about' ? 'active' : ''}`}>
+            <button className="dropbtn" onClick={() => toggleDropdown('about')}>About Us</button>
             <div className="dropdown-content">
               <Link to="/about" onClick={handleNavItemClick}>Our Organisation</Link>
               <Link to="/focus" onClick={handleNavItemClick}>Our Journey</Link>
-              <Link to="#" onClick={scrollToFounder}>Founders</Link> {/* Updated this line */}
-              <Link to="/focus-areas" onClick={handleNavItemClick}>Focus Areas</Link>
+              <Link to="#" onClick={scrollToFounder}>Founders</Link>
               <Link to="/focus-areas" onClick={handleNavItemClick}>Focus Areas</Link>
             </div>
           </li>
           <li><Link to="/campus" onClick={handleNavItemClick}>Keyprojects</Link></li>
           <li><Link to="/campus" onClick={handleNavItemClick}>Campus</Link></li>
           <li><Link to="/sonch-in-news" onClick={handleNavItemClick}>Sonch in News</Link></li>
-          <li className="dropdown">
-           
-          </li>
           <li><Link to="/contact" className="btn" onClick={handleNavItemClick}>Contact us</Link></li>
           <li><button onClick={openDonationModal} className="btn donate-btn">Donate</button></li>
         </ul>
-        <img src={menu_icon} alt="Menu" className="menu-icon" onClick={toggleMenu} />
+        <img src={menu_icon} alt="Menu" className={`menu-icon ${mobileMenu ? 'active' : ''}`} onClick={toggleMenu} />
       </nav>
       <DonationModal isOpen={isModalOpen} onClose={closeDonationModal} />
     </>
   )
 }
-
-export default Navbar
