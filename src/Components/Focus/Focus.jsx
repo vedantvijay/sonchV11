@@ -27,36 +27,37 @@ function SonchCard({ title, content, image }) {
 
 const newsItems = [
   {
-    title: "Sonch on Trees",
-    content: "At Sonch, we believe in the power of trees to transform communities and combat climate change. Our tree planting initiatives have helped restore forests, provide habitats for wildlife, and improve air quality in rural areas across India.",
+    title: "Digital Literacy",
+    content: "SONCH empowers communities by providing essential digital skills, helping individuals access information, enhance employability, and engage with modern technology for personal and professional growth.",
     image: gallery_1
   },
   {
-    title: "Education Program Reaches Milestone",
-    content: "Sonch's education program has successfully helped 1000 underprivileged children access quality education in remote areas, transforming lives and communities.",
+    title: "Climate and Environmental Change",
+    content: "We address the urgent challenges of climate change by promoting sustainable practices, raising awareness, and working on projects that protect natural resources and mitigate environmental impacts.",
     image: gallery_2
   },
   {
-    title: "Sustainable Agriculture Workshop",
-    content: "Sonch organized a workshop on sustainable agriculture techniques, benefiting over 500 farmers in drought-prone regions and promoting food security.",
+    title: "Women Empowerment",
+    content: "SONCH promotes gender equality by ensuring women’s active participation in decision-making processes, livelihood generation, and community leadership, leading to a more just and equitable society.",
     image: gallery_3
   },
   {
-    title: "Women Empowerment Through Skill Development",
-    content: "Sonch's skill development program has empowered 250 women with tailoring skills, enabling them to start their own businesses and achieve financial independence.",
+    title: "Livelihood Promotion",
+    content: "Through skill development and training programs, SONCH equips marginalized individuals with the tools to secure sustainable livelihoods, fostering economic independence and community development.",
     image: gallery_4
   },
   {
-    title: "Clean Water Project Expands",
-    content: "Sonch has expanded its clean water project, providing access to safe drinking water for 10 more villages in rural areas, improving health and sanitation.",
+    title: "Primary Education",
+    content: "We are committed to increasing access to quality education for children in underserved communities, providing them with the knowledge and skills to create a brighter future.",
     image: gallery_1
   },
   {
-    title: "Annual Fundraising Gala Success",
-    content: "Sonch's annual fundraising gala raised record amounts to support ongoing projects and launch new initiatives for community development and environmental conservation.",
+    title: "Healthcare & Sanitation",
+    content: "SONCH promotes health awareness and sanitation by advocating for preventive care, hygiene practices, and clean water, ensuring healthier and more resilient communities.",
     image: gallery_2
   }
-]
+];
+
 
 export default function SonchNews() {
   console.log('News items:', newsItems); // Debugging log

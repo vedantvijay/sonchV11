@@ -99,11 +99,11 @@ export default function Component({ founderRef }) {
               <Link to="/about" onClick={handleNavItemClick}>Our Organisation</Link>
               <Link to="/focus" onClick={handleNavItemClick}>Our Journey</Link>
               <Link to="#" onClick={scrollToFounder}>Founders</Link>
-              <Link to="/focus-areas" onClick={handleNavItemClick}>Focus Areas</Link>
+              <Link to="/focus-areas" onClick={handleNavItemClick}>Our Values</Link>
             </div>
           </li>
           <li><Link to="/campus" onClick={handleNavItemClick}>Keyprojects</Link></li>
-          <li><Link to="/campus" onClick={handleNavItemClick}>Campus</Link></li>
+          <li><Link to="/gallery" onClick={handleNavItemClick}>Gallery</Link></li>
           <li><Link to="/sonch-in-news" onClick={handleNavItemClick}>Sonch in News</Link></li>
           <li><Link to="/contact" className="btn" onClick={handleNavItemClick}>Contact us</Link></li>
           <li><button onClick={openDonationModal} className="btn donate-btn">Donate</button></li>

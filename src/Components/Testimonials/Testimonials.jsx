@@ -9,29 +9,27 @@ import { motion, useInView } from 'framer-motion'
 
 const testimonials = [
   {
-    name: "Aditya Pratap Singh",
-    location: "Patna, Bihar",
+    name: "Sunita Devi",
+    location: "Village Leader",
     image: user_1,
-    text: "Sonch NGO revolutionized my farming. Their sustainable agriculture program doubled my crop yield and reduced expenses. Now I can provide better for my family and send my kids to school. Sonch gave me hope for a brighter future in farming."
+    text :"Thanks to SONCH, I have learned how to assert my voice in our community meetings. Their training has given me the confidence to actively participate in decisions that affect our village, and now I work alongside other women to uplift our community."
   },
   {
-    name: "Satwik Srivastava",
-    location: "Bareily, UP",
+    name: "Rani Kumari",
+    location: "Program Participant",
     image: user_2,
-    text: "Thanks to Sonch NGO, I'm the first in my village to attend college. They provided books, convinced my parents about girls' education, and continue to mentor me. Sonch changed my life's trajectory."
+    text: "Before joining SONCH’s digital literacy program, I never imagined using a computer. Now, I’m not only comfortable with it but have also helped my children embrace technology for education. It has opened doors for all of us."
   },
   {
-    name: "KripaShankar",
-    location: "Baliya, UP",
+    name: "Rajeshwari",
+    location: "Entrepreneur",
     image:user_3,
-    text: "Sonch NGO's program transformed me. I learned tailoring, got a micro-loan, and started my business. Now I'm financially independent and active in village decisions. Sonch empowered me and many women in our community."
-  },
+    text: "Through SONCH’s vocational training, I developed skills in tailoring. Now, I have my own small business and am able to provide for my family. This has transformed my life and given me a sense of independence." },
   {
-    name: "William Jackson",
-    location: "Edusity, USA",
+    name: "Mahendra Yadav",
+    location: "Farmer",
     image: user_4,
-    text: "Choosing to pursue my degree at Edusity was one of the best decisions I've ever made. The supportive community, state-of-the-art facilities, and commitment to academic excellence have truly exceeded my expectations."
-  }
+    text: "SONCH has empowered us to understand sustainable farming techniques. With their help, we formed a farmer’s club, and now we can market our produce collectively, which has increased our income and strengthened our community." }
 ]
 
 export default function Testimonials() {

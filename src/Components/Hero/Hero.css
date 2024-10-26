@@ -1,22 +1,16 @@
 .hero {
-    width: 100vw;
-        min-height: 100vh;
-        background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url('../../assets/hero.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        /* Ensure the background is fixed */
-        display: flex;
-        flex-direction: column;
-        /* Stack content on mobile */
-        align-items: center;
-        justify-content: center;
-        color: white;
-        padding: 10px;
-        box-sizing: border-box;
-        overflow-x: hidden;
-        overflow-y: auto;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)), url('../../assets/hero.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .hero-text {

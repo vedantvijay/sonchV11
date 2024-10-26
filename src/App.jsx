@@ -64,7 +64,7 @@ const Home = ({ setPlayState }) => (
 
 const AboutPage = ({ setPlayState }) => (
   <>
-    <Title subTitle='About Us' title='Our Story' />
+    <Title  title='About us' />
     <About setPlayState={setPlayState} />
   </>
 )
