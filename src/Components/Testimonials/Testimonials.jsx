@@ -41,7 +41,7 @@ export default function Testimonials() {
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={{ duration: 0.3, delay: 0.2 }}
       >
         Testimonials
       </motion.h2>
@@ -52,20 +52,15 @@ export default function Testimonials() {
             className="testimonial-card"
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 1, delay: 0.2 + index * 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 + index * 0.2 }}
             whileHover={{
               scale: 1.05,
               boxShadow: "0 8px 16px rgba(0, 0, 0, 0.1)",
-              transition: { duration: 0.3 }
+              transition: { duration: 0.2 }
             }}
           >
             <div className="user-info">
-              <motion.img 
-                src={testimonial.image} 
-                alt={testimonial.name}
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              />
+              
               <div>
                 <h3>{testimonial.name}</h3>
                 <span>{testimonial.location}</span>

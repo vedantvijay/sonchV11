@@ -25,7 +25,7 @@ const Campus = () => {
         <img src={gallery_4} alt="Gallery 4" />
       </div>
       <button className='btn dark-btn' onClick={handleGalleryClick}>
-        Join Us <img src={white_arrow} alt="Arrow" />
+        See more <img src={white_arrow} alt="Arrow" />
       </button>
     </div>
   )

@@ -15,6 +15,7 @@ import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
 import Gallery from './Components/Gallary/Gallery'
 import News from './Components/News/News'
 import Readmore from './Components/Readmore/Readmore'
+import Keyprojects from './Components/Keyprojects/Keyprojects'
 const App = () => {
   const [playState, setPlayState] = useState(false);
   const founderRef = useRef(null); // Create the ref here
@@ -34,7 +35,8 @@ const App = () => {
             <Route path="/focus" element={<Focus />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/sonch-in-news" element={<NewsPage />} />
-            <Route path="/sonch-in-news/readmore" element={<ReadmorePage/>} />
+            <Route path="/sonch-in-news/readmore" element={<ReadmorePage />} />
+            <Route path="/keyprojects" element={<Keyprojects/>} />
           </Routes>
         </div>
         <Footer />

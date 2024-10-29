@@ -36,15 +36,7 @@
     margin-bottom: 16px;
 }
 
-.user-info img {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 4px solid #212EA0;
-    object-fit: cover;
-    margin-right: 12px;
-    transition: all 0.3s ease;
-}
+
 
 .user-info img:hover {
     transform: scale(1.1);

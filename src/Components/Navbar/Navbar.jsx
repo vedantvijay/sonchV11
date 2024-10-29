@@ -102,7 +102,7 @@ export default function Component({ founderRef }) {
               <Link to="/focus-areas" onClick={handleNavItemClick}>Our Values</Link>
             </div>
           </li>
-          <li><Link to="/campus" onClick={handleNavItemClick}>Keyprojects</Link></li>
+          <li><Link to="/Keyprojects" onClick={handleNavItemClick}>Keyprojects</Link></li>
           <li><Link to="/gallery" onClick={handleNavItemClick}>Gallery</Link></li>
           <li><Link to="/sonch-in-news" onClick={handleNavItemClick}>Sonch in News</Link></li>
           <li><Link to="/contact" className="btn" onClick={handleNavItemClick}>Contact us</Link></li>
