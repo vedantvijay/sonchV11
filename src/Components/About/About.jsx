@@ -20,13 +20,12 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 }
 
-const AnimatedSection = ({ children, className }) => {
-  const ref = React.useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
+const AnimatedSection = ({ children, className, sectionRef }) => {
+  const isInView = useInView(sectionRef, { once: true, amount: 0.6 })
 
   return (
     <motion.section
-      ref={ref}
+      ref={sectionRef}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={fadeInUp}
@@ -37,13 +36,10 @@ const AnimatedSection = ({ children, className }) => {
   )
 }
 
-const About = () => {
-  const founderRef = useRef(null); // Create a ref for the founder section
-
+const About = ({ founderRef, organisationRef, journeyRef, valuesRef }) => {
   return (
     <div className="about-container">
-      <AnimatedSection className="about">
-        
+      <AnimatedSection className="about" sectionRef={organisationRef}>
         <h2>Our Organisation</h2>
         <p><strong>SONCH</strong>  is a mission-driven organization dedicated to fostering inclusive growth and sustainable development. We work to empower communities by creating opportunities for self-governance, promoting equitable access to resources, and driving positive social change. Through collaborative efforts, SONCH aims to create a lasting impact by uplifting marginalized sections of society and advocating for a just, equitable future for all.
 SONCH strives to build a just society where equality and self-governance thrive. By strengthening local governance systems and encouraging the active participation of marginalized communities, SONCH helps people improve their living conditions and make informed decisions about their future. The organization’s efforts focus on sustainable development, women empowerment, education, healthcare, and livelihood promotion.
@@ -59,26 +55,18 @@ SONCH strives to build a just society where equality and self-governance thrive.
         <p>Join us in building stronger, more resilient communities.</p>
       </AnimatedSection>
 
-      <AnimatedSection className="about">
-        
+      <AnimatedSection className="about" sectionRef={journeyRef}>
         <h2>Our Journey</h2>
         <p><strong>SONCH</strong> has an interesting saga even before its advent. Much before the name and organisation CEED formalised for leading the transformative works in the Indo-Gangetic plain, a team of young, passionate and highly motivated professionals started a public awareness on renewable energy through 'Bihar Renewable Energy Development Support Network (BREDSN)' in Bihar in 2010, which for the first time in the state created buzz around cleaner energy, particularly solar, and its decentralised models with the aim to promote energy access and climate solutions.</p>
       </AnimatedSection>
 
-      <AnimatedSection className="about">
-        
-        <h2>Mission and Goal</h2>
-        <p><strong>SONCH</strong> is committed to empowering communities by promoting self-governance and sustainable development. Our mission is to enhance socio-economic and cultural growth through skill development, knowledge-sharing, and equitable participation in decision-making. We aim to create an inclusive society where individuals are equipped with the resources to improve their quality of life and foster positive social change.</p>
-      </AnimatedSection>
-      <AnimatedSection className="about">
-        
+      <AnimatedSection className="about" sectionRef={valuesRef}>
         <h2>Our Values</h2>
         <p> At <strong>SONCH</strong>, we are driven by a commitment to transparency, teamwork, and accountability in all our activities. We believe in the power of democratic processes and collective decision-making to foster sustainable development. Our guiding principles emphasize community-led initiatives, where local participation is central to addressing social challenges. We uphold the belief that true change begins from within the community, and through empowerment, people can overcome poverty and achieve lasting development. We prioritize ethical practices, inclusivity, and social responsibility in everything we do.</p>
       </AnimatedSection>
 
-      <AnimatedSection className="founder" id="founder" ref={founderRef}>
+      <AnimatedSection className="founder"  sectionRef={founderRef}>
         <div className="founder-content">
-      
           <h2>Founder & Advisory Group</h2>
           <p>In order to bring forth and provide a solution driven approach in climate and energy related fields in the Indo-Gangetic plain, CEED has carved a niche in a very short span of time that seeks an optimal and smart approach to work toward environmental conservation.</p>
           <p>Over the years, CEED has roped in luminaries, changemakers and notable people with impeccable domain expertise in advisory roles to build and nurture the work and activities in a variety of fields. The advisory group of the CEED is composed of noted experts, academicians, development professionals and people of repute from all walks of life. The advisory group plays a significant role in validating the mission and vision of CEED and regularly advises on matters of important issues while shaping the sustainable trajectory of the organisation.</p>

@@ -18,17 +18,31 @@ import Readmore from './Components/Readmore/Readmore'
 import Keyprojects from './Components/Keyprojects/Keyprojects'
 const App = () => {
   const [playState, setPlayState] = useState(false);
-  const founderRef = useRef(null); // Create the ref here
+  const founderRef = useRef(null);
+  const organisationRef = useRef(null);
+  const journeyRef = useRef(null);
+  const valuesRef = useRef(null);
 
   return (
     <Router>
       <div>
-        <Navbar founderRef={founderRef} /> {/* Pass the ref here */}
-        <div className="container" >
+        <Navbar 
+          founderRef={founderRef} 
+          organisationRef={organisationRef} 
+          journeyRef={journeyRef} 
+          valuesRef={valuesRef} 
+        />
+        <div className="container">
           <Routes>
             <Route path="/" element={<Home setPlayState={setPlayState} />} />
             <Route path="/programs" element={<ProgramsPage />} />
-            <Route path="/about" element={<AboutPage setPlayState={setPlayState} />} />
+            <Route path="/about" element={<AboutPage 
+              setPlayState={setPlayState} 
+              founderRef={founderRef} 
+              organisationRef={organisationRef} 
+              journeyRef={journeyRef} 
+              valuesRef={valuesRef} 
+            />} />
             <Route path="/campus" element={<CampusPage />} />
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/contact" element={<ContactPage />} />
@@ -64,10 +78,16 @@ const Home = ({ setPlayState }) => (
 
 
 
-const AboutPage = ({ setPlayState }) => (
+const AboutPage = ({ setPlayState, founderRef, organisationRef, journeyRef, valuesRef }) => (
   <>
-    <Title  title='About us' />
-    <About setPlayState={setPlayState} />
+    <Title title='About us' />
+    <About 
+      setPlayState={setPlayState} 
+      founderRef={founderRef} 
+      organisationRef={organisationRef} 
+      journeyRef={journeyRef} 
+      valuesRef={valuesRef} 
+    />
   </>
 )
 const ProgramsPage = () => (

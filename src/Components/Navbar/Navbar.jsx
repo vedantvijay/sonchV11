@@ -19,7 +19,7 @@ const DonationModal = ({ isOpen, onClose }) => {
   );
 };
 
-export default function Component({ founderRef }) {
+export default function Component({ founderRef, organisationRef, journeyRef, valuesRef }) {
   const [sticky, setSticky] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -77,6 +77,12 @@ export default function Component({ founderRef }) {
     }
   };
 
+  const scrollToSection = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <nav ref={navRef} className={`container ${sticky ? 'dark-nav' : ''}`}>
@@ -94,12 +100,12 @@ export default function Component({ founderRef }) {
             </div>
           </li>
           <li className={`dropdown ${activeDropdown === 'about' ? 'active' : ''}`}>
-            <button className="dropbtn" onClick={() => toggleDropdown('about')}>About Us</button>
+            <Link to= "/about"><button className="dropbtn" onClick={() => toggleDropdown('about')}>About Us</button></Link>
             <div className="dropdown-content">
-              <Link to="/about" onClick={handleNavItemClick}>Our Organisation</Link>
-              <Link to="/focus" onClick={handleNavItemClick}>Our Journey</Link>
-              <Link to="#" onClick={scrollToFounder}>Founders</Link>
-              <Link to="/focus-areas" onClick={handleNavItemClick}>Our Values</Link>
+              <Link to="#" onClick={() => scrollToSection(organisationRef)}>Our Organisation</Link>
+              <Link to="#" onClick={() => scrollToSection(journeyRef)}>Our Journey</Link>
+              <Link to="#" onClick={() => scrollToSection(founderRef)}>Founders</Link>
+              <Link to="#" onClick={() => scrollToSection(valuesRef)}>Our Values</Link>
             </div>
           </li>
           <li><Link to="/Keyprojects" onClick={handleNavItemClick}>Keyprojects</Link></li>
