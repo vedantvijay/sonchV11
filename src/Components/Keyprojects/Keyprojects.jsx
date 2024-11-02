@@ -72,7 +72,7 @@ export default function SonchNews() {
   return (
     <div className="sonch-news">
       <div className="sonch-news-container">
-        <h1 className="sonch-news-title">Sonch in News</h1>
+        <h1 className="sonch-news-title">Key Projects</h1>
         <div className="sonch-news-grid">
           {newsItems.map((item, index) => (
             <SonchCard key={index} {...item} />

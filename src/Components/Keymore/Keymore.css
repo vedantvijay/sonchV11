@@ -82,6 +82,7 @@ p {
 /* Hero Section */
 .her{
     background-color: #212EA0;
+    opacity: 20%;
     color: #212EA0;
     padding: 5rem 0;
 }
@@ -101,6 +102,7 @@ p {
 {
     color:#ffffff;
     margin-bottom: 1rem;
+    size: 39px;
 }
 .her-text p{
 color: rgb(255, 255, 255);
