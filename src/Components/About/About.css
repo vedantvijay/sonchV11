@@ -76,6 +76,10 @@
 }
 
 @media (max-width: 768px) {
+        .about,
+        .founder {
+            margin: 100px 0;
+        }
     .founder-profile {
         flex-direction: column;
         align-items: center;

@@ -16,6 +16,8 @@ import Gallery from './Components/Gallary/Gallery'
 import News from './Components/News/News'
 import Readmore from './Components/Readmore/Readmore'
 import Keyprojects from './Components/Keyprojects/Keyprojects'
+import Keymore from './Components/Keymore/Keymore'
+
 const App = () => {
   const [playState, setPlayState] = useState(false);
   const founderRef = useRef(null);
@@ -32,6 +34,7 @@ const App = () => {
           journeyRef={journeyRef} 
           valuesRef={valuesRef} 
         />
+   
         <div className="container">
           <Routes>
             <Route path="/" element={<Home setPlayState={setPlayState} />} />
@@ -50,7 +53,8 @@ const App = () => {
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/sonch-in-news" element={<NewsPage />} />
             <Route path="/sonch-in-news/readmore" element={<ReadmorePage />} />
-            <Route path="/keyprojects" element={<Keyprojects/>} />
+            <Route path="/keyprojects" element={<Keyprojects />} />
+            <Route path="/keymore" element={<Keymore/>} />
           </Routes>
         </div>
         <Footer />

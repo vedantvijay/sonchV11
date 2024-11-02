@@ -1,10 +1,9 @@
-import React, { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import './Readmore.css'
-import gallery_1 from '../../assets/gallery-1.png'
-import gallery_2 from '../../assets/gallery-2.png'
-import gallery_3 from '../../assets/gallery-3.png'
-import gallery_4 from '../../assets/gallery-4.png'
+import React from 'react';
+import './Readmore.css';
+import gallery_1 from '../../assets/gallery-1.png';
+import gallery_2 from '../../assets/gallery-2.png';
+import gallery_3 from '../../assets/gallery-3.png';
+import gallery_4 from '../../assets/gallery-4.png';
 
 const newsItems = [
   {
@@ -37,80 +36,28 @@ const newsItems = [
     content: "Sonch's annual fundraising gala raised record amounts to support ongoing projects and launch new initiatives for community development and environmental conservation.",
     image: gallery_2
   }
-]
+];
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-}
-
-const AnimatedSection = ({ children, className }) => {
-  const ref = React.useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
-
-  return (
-    <motion.section
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={fadeInUp}
-      className={className}
-    >
-      {children}
-    </motion.section>
-  )
-}
-
-const About = () => {
-  const founderRef = useRef(null); // Create a ref for the founder section
-
+const Readmore = () => {
   return (
     <div className="about-container">
-      <AnimatedSection className="founder" id="founder" ref={founderRef}>
+      <section className="founder">
         <div className="founder-content">
-          
           <h1>News Highlights</h1>
           <p>Here are some of the latest updates and initiatives from Sonch:</p>
           {newsItems.map((item, index) => (
-            <motion.div 
-              key={index} 
-              className="founder-profile"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
-              <motion.img 
-                src={item.image} 
-                alt={item.title} 
-                className="founder-image"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-              />
+            <div key={index} className="founder-profile">
+              <img src={item.image} alt={item.title} className="founder-image" />
               <div className="founder-info">
-                <motion.h3
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                >
-                  {item.title}
-                </motion.h3>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                >
-                  {item.content}
-                </motion.p>
+                <h3>{item.title}</h3>
+                <p>{item.content}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
-      </AnimatedSection>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default Readmore;

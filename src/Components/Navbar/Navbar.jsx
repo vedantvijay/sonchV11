@@ -71,11 +71,6 @@ export default function Component({ founderRef, organisationRef, journeyRef, val
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   }
 
-  const scrollToFounder = () => {
-    if (founderRef && founderRef.current) {
-      founderRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
@@ -85,19 +80,19 @@ export default function Component({ founderRef, organisationRef, journeyRef, val
 
   return (
     <>
-      <nav ref={navRef} className={`container ${sticky ? 'dark-nav' : ''}`}>
+      <nav ref={navRef} className={`container ${sticky ? 'dark-nav' : 'dark-nav'}`}>
         <Link to="/">
           <img src={logo} alt="Logo" className="logo" />
         </Link>
         <ul className={mobileMenu ? 'mobile-menu-active' : ''}>
           <li><Link to="/" onClick={handleNavItemClick}>Home</Link></li>
           <li className={`dropdown ${activeDropdown === 'focus' ? 'active' : ''}`}>
-            <button className="dropbtn" onClick={() => toggleDropdown('focus')}>Focus Area</button>
-            <div className="dropdown-content">
+           <Link to="/focus"> <button className="dropbtn" onClick={() => toggleDropdown('focus')}>Focus Area</button></Link>
+            {/* <div className="dropdown-content">
               <Link to="/focus" onClick={handleNavItemClick}>Digital literacy</Link>
               <Link to="/focus" onClick={handleNavItemClick}>Women Empowerment</Link>
               <Link to="/focus" onClick={handleNavItemClick}>Institutional Building</Link>
-            </div>
+            </div> */}
           </li>
           <li className={`dropdown ${activeDropdown === 'about' ? 'active' : ''}`}>
             <Link to= "/about"><button className="dropbtn" onClick={() => toggleDropdown('about')}>About Us</button></Link>

@@ -1,15 +1,17 @@
 nav {
   width: 100%;
   color: #fff;
-  padding: 12px 20px;
-  position: fixed;
+  padding: 50px 20px;
+  padding-bottom: 10px;
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 1;
   transition: background-color 0.3s ease, padding 0.3s ease;
+  
 }
 
 .logo {
