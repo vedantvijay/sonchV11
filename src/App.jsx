@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
-import Programs from './Components/Programs/Programs'
+import Programs from './Components/Slider/slider'
 import Title from './Components/Title/Title'
 import About from './Components/About/About'
 import Focus from './Components/Focus/Focus'
@@ -11,7 +11,7 @@ import Campus from './Components/Campus/Campus'
 import Testimonials from './Components/Testimonials/Testimonials'
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
-import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
+
 import Gallery from './Components/Gallary/Gallery'
 import News from './Components/News/News'
 import Readmore from './Components/Readmore/Readmore'
@@ -58,7 +58,7 @@ const App = () => {
           </Routes>
         </div>
         <Footer />
-        <VideoPlayer playState={playState} setPlayState={setPlayState} />
+        
       </div>
     </Router>
   )
@@ -67,7 +67,7 @@ const App = () => {
 const Home = ({ setPlayState }) => (
   <>
     <Hero />
-    <Title subTitle='Our Mission' title='What We Focus On' />
+    
     <Programs />
     
     <Title subTitle='Gallery' title='Our Journey' />

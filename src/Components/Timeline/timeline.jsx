@@ -6,30 +6,45 @@ import styles from './timeline.module.css'; // Use .module.css for CSS modules
 
 const timelineEvents = [
   {
-    year: "2010",
-    title: "SONCH Founded",
-    description: "SONCH was established with a mission to empower rural communities through sustainable development initiatives."
+    year: "2001",
+    title: "Laying the Foundation",
+    description: "Began as volunteers in a government school, teaching Mathematics and Science to students."
   },
   {
-    year: "2015",
-  
-    title: "Sustainable Agriculture Program Launched",
-    description: "Introduced innovative farming techniques to over 1000 farmers, doubling crop yields and reducing expenses."
+    year: "2002",
+    title: "Formation of SONCH",
+    description: "Established SONCH as a society and initiated Maths and Science projects in two schools in Rewa, Madhya Pradesh."
   },
   {
-    year: "2018",
-    title: "Girls' Education Initiative",
-    description: "Started a program to promote girls' education, providing books and mentorship to 500 young women."
+    year: "2003",
+    title: "Expanding Educational Reach",
+    description: "Expanded SONCH’s reach by covering 2-3 additional schools"
   },
   {
-    year: "2020",
-    title: "Micro-loan Program",
-    description: "Launched a micro-loan program, empowering 200 women to start their own businesses and achieve financial independence."
+    year: "2008",
+    title: "Skill Development Begins",
+    description: "Launched the first Skill Development Center in Anuppur, Madhya Pradesh"
   },
   {
-    year: "2023",
-    title: "Expansion to New Regions",
-    description: "Extended our programs to three new states, impacting over 10,000 lives across rural India."
+    year: "2009",
+    title: "Widening the Skill Network",
+    description: "Opened three more skill centers, one each in Rewa, Sidhi, and Satna, Madhya Pradesh."
+  }, {
+    year: "2012",
+    title: "Sustainability Initiative",
+    description: "Initiated the Plantation Project to promote environmental sustainability."
+  }, {
+    year: "2017",
+    title: "Empowering Women",
+    description: "Began work with Women Self-Help Groups (SHGs) in Bihar, focusing on women’s empowerment."
+  }, {
+    year: "2021",
+    title: "Promoting Oral Hygiene",
+    description: "Conducted an Oral Hygiene Project campaign in schools across Bihar."
+  },{
+    year: "2022",
+    title: "Growth in Bihar",
+    description: "Two New skill development centre launched in bihar"
   }
 ]
 
