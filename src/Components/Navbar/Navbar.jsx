@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logooo.png'
 import menu_icon from '../../assets/menu-icon.png'
 import qr_code from '../../assets/qr_code.png'
 'use client'

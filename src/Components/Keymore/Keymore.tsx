@@ -105,26 +105,7 @@ export default function Component() {
       </section>
 
       {/* Activities Section */}
-      <section className="activities">
-        <div className="container-keymore">
-          <h2>Our Activities</h2>
-          <div className="activities-list">
-            {activities.map((activity, index) => (
-              <div key={index} className="activity-item">
-                <div className="activity-content">
-                  <h3>{activity.title}</h3>
-                  <p>{activity.description}</p>
-                  
-                </div>
-                <div className="activity-buttons">
-                  {/* <Button variant="outline">Learn More</Button>
-                  <Button>Join Now</Button> */}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
     </div>
   )
 }
