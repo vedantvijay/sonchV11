@@ -4,7 +4,7 @@ import './Campus.css'
 import gallery_2 from '../../assets/img-2.jpg';
 import gallery_3 from '../../assets/img (3).jpg';
 import gallery_4 from '../../assets/img (4).jpg';
-import gallery_5 from '../../assets/img-35.png';
+import gallery_5 from '../../assets/img-35.png'
 import white_arrow from '../../assets/white-arrow.png'
 // Ensure the correct path to the Gallery component
 import Gallery from '../Gallary/Gallery'; // Corrected path if necessary
