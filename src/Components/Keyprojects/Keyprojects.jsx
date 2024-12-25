@@ -2,9 +2,8 @@ import React from 'react'
 import './Keyprojects.css'
 import { useNavigate } from 'react-router-dom';
 import gallery_1 from '../../assets/gallery-1.png'
-import gallery_2 from '../../assets/gallery-2.png'
-import gallery_3 from '../../assets/gallery-3.png'
-
+import gallery_2 from '../../assets/img-2.jpg'
+import gallery_35 from '../../assets/img-35.png';
 function SonchCard({ title, content, image }) {
   const navigate = useNavigate();
   const handleGalleryClick = () => {
@@ -35,19 +34,19 @@ function SonchCard({ title, content, image }) {
 
 const newsItems = [
   {
-    title: "Sonch on Trees",
-    content: "At Sonch, we believe in the power of trees to transform communities and combat climate change. Our tree planting initiatives have helped restore forests, provide habitats for wildlife, and improve air quality in rural areas across India.",
+    title: "Plantation projects",
+    content: "Under the 'Harit Pradesh Harit Desh' initiative, NGO Soch planted 30,000 saplings, including fruit-bearing and timber trees, across various districts of Bihar and Jharkhand in the past six months. The program aims to raise environmental awareness and promote sustainable development among communities. Members of the organization actively participated in nurturing the saplings, emphasizing the importance of ecological balance. As the article states, “संस्था लोगों के बीच एक सहजान समझ विकसित करना चाह रही है,” highlighting Soch’s commitment to fostering a deeper understanding of environmental conservation through collective and impactful actions.",
     image: gallery_1
   },
   {
-    title: "Education Program Reaches Milestone",
-    content: "Sonch's education program has successfully helped 1000 underprivileged children access quality education in remote areas, transforming lives and communities.",
+    title: "Digital literacy centres",
+    content: "Digital Literacy CentresSONCH has established Digital Literacy Centres to bridge the digital divide and empower individuals with essential technological skills. These centres provide training in basic computer operations, internet usage, and digital tools, enabling participants to enhance their employability and adapt to the modern digital landscape. This initiative equips communities to access opportunities and resources more effectively",
     image: gallery_2
   },
   {
-    title: "Sustainable Agriculture Workshop",
-    content: "Sonch organized a workshop on sustainable agriculture techniques, benefiting over 500 farmers in drought-prone regions and promoting food security.",
-    image: gallery_3
+    title: "Women Empowerment",
+    content: "Women Empowerment ProjectsSONCH’s Women Empowerment Projects aim to uplift women by promoting financial independence, leadership, and active participation in decision-making processes. Through partnerships with Women Self-Help Groups (SHGs), the initiative provides training, resources, and mentorship to help women lead socio-economic transformations within their communities, fostering a more equitable and inclusive society",
+    image: gallery_35
   }
 ];
 
