@@ -23,3 +23,16 @@
        
         text-align: center;
 }
+@media (max-width: 768px){
+.title p {
+        font-size: 20px;
+        color: #000F38;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-transform: none;
+
+        text-align: center;
+    }
+}
