@@ -1,10 +1,9 @@
 import React from 'react'
 import './News.css'
 import { useNavigate } from 'react-router-dom';
-import gallery_1 from '../../assets/gallery-1.png'
-import gallery_2 from '../../assets/gallery-2.png'
-import gallery_3 from '../../assets/gallery-3.png'
-import gallery_4 from '../../assets/gallery-4.png'
+import gallery_1 from '../../assets/img (41).jpg'
+import gallery_2 from '../../assets/img (34).jpg'
+
 
 
 function SonchCard({ title, content, image }) {
@@ -36,35 +35,16 @@ function SonchCard({ title, content, image }) {
 
 const newsItems = [
   {
-    title: "Sonch on Trees",
-    content: "At Sonch, we believe in the power of trees to transform communities and combat climate change. Our tree planting initiatives have helped restore forests, provide habitats for wildlife, and improve air quality in rural areas across India.",
+    title: "Bihar and Jharkhand Plantation project",
+    content: "Under the 'Harit Pradesh Harit Desh' initiative, NGO Soch planted 30,000 fruit and timber saplings across Bihar and Jharkhand to raise environmental awareness and foster sustainable community development.",
     image: gallery_1
   },
   {
-    title: "Education Program Reaches Milestone",
-    content: "Sonch's education program has successfully helped 1000 underprivileged children access quality education in remote areas, transforming lives and communities.",
-    image: gallery_2
-  },
-  {
-    title: "Sustainable Agriculture Workshop",
-    content: "Sonch organized a workshop on sustainable agriculture techniques, benefiting over 500 farmers in drought-prone regions and promoting food security.",
-    image: gallery_3
-  },
-  {
-    title: "Women Empowerment Through Skill Development",
-    content: "Sonch's skill development program has empowered 250 women with tailoring skills, enabling them to start their own businesses and achieve financial independence.",
-    image: gallery_4
-  },
-  {
-    title: "Clean Water Project Expands",
-    content: "Sonch has expanded its clean water project, providing access to safe drinking water for 10 more villages in rural areas, improving health and sanitation.",
-    image: gallery_1
-  },
-  {
-    title: "Annual Fundraising Gala Success",
-    content: "Sonch's annual fundraising gala raised record amounts to support ongoing projects and launch new initiatives for community development and environmental conservation.",
+    title: "Launched Multiple Digital Literacy Centre",
+    content: "Digital literacy promotion by NGO Soch in collaboration with Capgemini aims to empower underprivileged communities in Bihar. The initiative has established literacy centers, educating many through continuous efforts and impactful programs.",
     image: gallery_2
   }
+  
 ]
 
 export default function SonchNews() {

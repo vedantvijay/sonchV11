@@ -1,10 +1,12 @@
 import React from 'react'
 import './Focus.css'
-import gallery_1 from '../../assets/gallery-1.png'
-import gallery_2 from '../../assets/gallery-2.png'
-import gallery_3 from '../../assets/gallery-3.png'
-import gallery_4 from '../../assets/gallery-4.png'
+import gallery_6 from '../../assets/gallery-1.png'
 
+import gallery_1 from '../../assets/img-2.jpg'
+import gallery_2 from '../../assets/img (33).jpg'
+import gallery_3 from '../../assets/img (29).jpg'
+import gallery_4 from '../../assets/program-1.png'
+import gallery_5 from '../../assets/img-35.png'
 function SonchCard({ title, content, image }) {
   console.log('Card props:', { title, content, image }); // Debugging log
   return (
@@ -27,36 +29,37 @@ function SonchCard({ title, content, image }) {
 
 const newsItems = [
   {
-    title: "Digital Literacy",
-    content: "SONCH empowers communities by providing essential digital skills, helping individuals access information, enhance employability, and engage with modern technology for personal and professional growth.",
+    title: "Education",
+    content: "SONCH is dedicated to advancing access to quality education in underserved communities. By addressing educational disparities, we empower children and youth with the knowledge and skills required to contribute meaningfully to society. Our programs collaborate with local stakeholders to provide resources, bridge learning gaps, and cultivate a culture of lifelong learning, establishing education as the foundation for sustainable development.",
     image: gallery_1
   },
   {
-    title: "Climate and Environmental Change",
-    content: "We address the urgent challenges of climate change by promoting sustainable practices, raising awareness, and working on projects that protect natural resources and mitigate environmental impacts.",
+    title: "Skilling and Livelihood Promotion",
+    content: "We focus on enhancing employability through skill development and vocational training tailored to local needs. SONCH fosters economic independence by promoting entrepreneurial ventures and connecting individuals to market opportunities. By equipping communities with practical expertise and resources, we enable sustainable livelihoods and create pathways for long-term socioeconomic growth.",
     image: gallery_2
   },
   {
-    title: "Women Empowerment",
-    content: "SONCH promotes gender equality by ensuring women’s active participation in decision-making processes, livelihood generation, and community leadership, leading to a more just and equitable society.",
+    title: "Community Development",
+    content: "SONCH fosters inclusive community development by strengthening participatory governance and collective decision-making. Through capacity-building initiatives, we empower local institutions to address social and economic challenges effectively. By facilitating active engagement and promoting social cohesion, we aim to build resilient communities that can sustain equitable growth.",
     image: gallery_3
   },
   {
-    title: "Livelihood Promotion",
-    content: "Through skill development and training programs, SONCH equips marginalized individuals with the tools to secure sustainable livelihoods, fostering economic independence and community development.",
+    title: "Digital Education",
+    content: "Our digital education initiatives address the growing need for technological competence in underserved areas. SONCH bridges the digital divide by offering comprehensive training programs that enhance digital literacy and empower individuals to access modern opportunities. By integrating technology into education and skill-building, we prepare communities for the demands of a digitally-driven world.",
     image: gallery_4
   },
   {
-    title: "Primary Education",
-    content: "We are committed to increasing access to quality education for children in underserved communities, providing them with the knowledge and skills to create a brighter future.",
-    image: gallery_1
+    title: "Women Empowerment",
+    content: "SONCH is committed to fostering gender equity by equipping women with the resources and opportunities to lead and contribute to their communities. Through targeted initiatives, we promote financial independence, leadership development, and access to education. By addressing systemic barriers, we empower women to drive meaningful social and economic transformation.",
+    image: gallery_5
   },
   {
-    title: "Healthcare & Sanitation",
-    content: "SONCH promotes health awareness and sanitation by advocating for preventive care, hygiene practices, and clean water, ensuring healthier and more resilient communities.",
-    image: gallery_2
+    title: "Environment and Sustainability",
+    content: "SONCH is dedicated to environmental stewardship and sustainability through initiatives that address climate change, conservation, and resource management. We promote community engagement in practices such as reforestation, waste reduction, and renewable energy adoption. By fostering a culture of environmental responsibility, we contribute to the preservation of natural resources for future generations.",
+    image: gallery_6
   }
 ];
+
 
 
 export default function SonchNews() {

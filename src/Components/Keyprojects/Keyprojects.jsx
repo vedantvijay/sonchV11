@@ -4,29 +4,28 @@ import { useNavigate } from 'react-router-dom';
 import gallery_1 from '../../assets/gallery-1.png'
 import gallery_2 from '../../assets/gallery-2.png'
 import gallery_3 from '../../assets/gallery-3.png'
-import gallery_4 from '../../assets/gallery-4.png'
-
 
 function SonchCard({ title, content, image }) {
   const navigate = useNavigate();
-   const handleGalleryClick = () => {
-    navigate('/keymore'); // Route to the Gallery component
+  const handleGalleryClick = () => {
+    navigate('/keymore');
   };
-  console.log('Card props:', { title, content, image });
-  // Debugging log
+
   return (
-    <div className="sonch-card">
-      <img 
-        className="sonch-card-image" 
-        src={image}
-        alt={title}
-      />
-      <div className="sonch-card-content">
-        <h2 className="sonch-card-title">{title}</h2>
-        <p className="sonch-card-text">
+    <div className="snch-card">
+      <div className="snch-card-image-container">
+        <img 
+          className="snch-card-image" 
+          src={image}
+          alt={title}
+        />
+      </div>
+      <div className="snch-card-content">
+        <h2 className="snch-card-title">{title}</h2>
+        <p className="snch-card-text">
           {content}
         </p>
-        <button className="sonch-card-button" onClick={handleGalleryClick}>
+        <button className="snch-card-button" onClick={handleGalleryClick}>
           Learn More
         </button>
       </div>
@@ -49,31 +48,15 @@ const newsItems = [
     title: "Sustainable Agriculture Workshop",
     content: "Sonch organized a workshop on sustainable agriculture techniques, benefiting over 500 farmers in drought-prone regions and promoting food security.",
     image: gallery_3
-  },
-  {
-    title: "Women Empowerment Through Skill Development",
-    content: "Sonch's skill development program has empowered 250 women with tailoring skills, enabling them to start their own businesses and achieve financial independence.",
-    image: gallery_4
-  },
-  {
-    title: "Clean Water Project Expands",
-    content: "Sonch has expanded its clean water project, providing access to safe drinking water for 10 more villages in rural areas, improving health and sanitation.",
-    image: gallery_1
-  },
-  {
-    title: "Annual Fundraising Gala Success",
-    content: "Sonch's annual fundraising gala raised record amounts to support ongoing projects and launch new initiatives for community development and environmental conservation.",
-    image: gallery_2
   }
-]
+];
 
 export default function SonchNews() {
-  console.log('News items:', newsItems); // Debugging log
   return (
-    <div className="sonch-news">
-      <div className="sonch-news-container">
-        <h1 className="sonch-news-title">Key Projects</h1>
-        <div className="sonch-news-grid">
+    <div className="snch-news">
+      <div className="snch-news-container">
+        <h1 className="snch-news-title">Projects</h1>
+        <div className="snch-news-grid">
           {newsItems.map((item, index) => (
             <SonchCard key={index} {...item} />
           ))}

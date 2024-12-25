@@ -68,7 +68,7 @@ const TimelineEvent = ({ event, index }) => {
         hidden: { opacity: 0, y: 75 },
         visible: { opacity: 1, y: 0 }
       }}
-      transition={{ duration: 0.5, delay: index * 0.2 }}
+      transition={{ duration: 0.2, delay: index * 0.1 }}
       className={`${styles.timelineEvent} ${index % 2 === 0 ? styles.left : styles.right}`}
     >
       <div className={styles.eventContent}>
@@ -84,7 +84,7 @@ const TimelineEvent = ({ event, index }) => {
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
+          transition={{ duration: 0.2, delay: index * 0.1 + 0.2 }}
           className={styles.eventMarker}
         />
       </div>
@@ -98,7 +98,7 @@ const TimelineEvent = ({ event, index }) => {
       <motion.h2
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.2 }}
         className={styles.sectionTitle}
       >
         Our Journey

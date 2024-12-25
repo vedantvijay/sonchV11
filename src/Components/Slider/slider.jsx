@@ -1,25 +1,29 @@
 'use client'
-
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import './slider.css'
-import mrinalini from '../../assets/Mrinalini profpic.jpeg'
+
 import gallery_1 from '../../assets/gallery-1.png'
+import gallery_2 from '../../assets/img-2.jpg'
+import gallery_35 from '../../assets/img-35.png';
+
+
 const slides = [
   {
-    image: "https://media.geeksforgeeks.org/wp-content/uploads/geeksforgeeks-13.png",
-    title: "JUST TRANSITION FOR FUTURE READY JHARKHAND",
-    subtitle: "The project aimed at facilitating just and inclusive transition with developmental goal and guided by net-zero emission."
+    image: gallery_2,
+    title: "Education",
+    subtitle: ""
+  },
+  {
+    image: gallery_35,
+    title: "Women Empowerment",
+    subtitle: ""
   },
   {
     image: gallery_1,
-    title: "BUILDING A CLIMATE-RESILIENT JHARKHAND",
-    subtitle: "Way-forward for adaptation and mitigation"
-  },
-  {
-    image: mrinalini,
-    title: "COMMUNITY ENGAGEMENT",
-    subtitle: "Working together for a sustainable future"
+    title: "Environment and Sustainability",
+    subtitle: ""
   }
 ]
 
@@ -40,7 +44,11 @@ export default function Slider() {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
-  
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleGalleryClick = () => {
+    navigate('/Keyprojects',{ state: { refresh: true } });
+  }
   return (
     <div className="slider-container">
       <div className="slides">
@@ -66,7 +74,7 @@ export default function Slider() {
       </button>
 
       <div className="more-projects">
-        <button className="more-projects-btn">
+        <button className="more-projects-btn" onClick={handleGalleryClick}>
           More Projects
         </button>
       </div>

@@ -1,41 +1,20 @@
 import React from 'react';
 import './Readmore.css';
-import gallery_1 from '../../assets/gallery-1.png';
-import gallery_2 from '../../assets/gallery-2.png';
-import gallery_3 from '../../assets/gallery-3.png';
-import gallery_4 from '../../assets/gallery-4.png';
+import gallery_1 from '../../assets/img (41).jpg'
+import gallery_2 from '../../assets/img (34).jpg'
 
 const newsItems = [
   {
-    title: "Sonch on Trees",
-    content: "At Sonch, we believe in the power of trees to transform communities and combat climate change. Our tree planting initiatives have helped restore forests, provide habitats for wildlife, and improve air quality in rural areas across India.",
+    title: "Bihar and Jharkhand Plantation project",
+    content: "Under the 'Harit Pradesh Harit Desh' initiative, NGO Soch planted 30,000 saplings, including fruit-bearing and timber trees, across various districts of Bihar and Jharkhand in the past six months. The program aims to raise environmental awareness and promote sustainable development among communities. Members of the organization actively participated in nurturing the saplings, emphasizing the importance of ecological balance. As the article states, “संस्था लोगों के बीच एक सहजान समझ विकसित करना चाह रही है,” highlighting Soch’s commitment to fostering a deeper understanding of environmental conservation through collective and impactful actions.",
     image: gallery_1
   },
   {
-    title: "Education Program Reaches Milestone",
-    content: "Sonch's education program has successfully helped 1000 underprivileged children access quality education in remote areas, transforming lives and communities.",
-    image: gallery_2
-  },
-  {
-    title: "Sustainable Agriculture Workshop",
-    content: "Sonch organized a workshop on sustainable agriculture techniques, benefiting over 500 farmers in drought-prone regions and promoting food security.",
-    image: gallery_3
-  },
-  {
-    title: "Women Empowerment Through Skill Development",
-    content: "Sonch's skill development program has empowered 250 women with tailoring skills, enabling them to start their own businesses and achieve financial independence.",
-    image: gallery_4
-  },
-  {
-    title: "Clean Water Project Expands",
-    content: "Sonch has expanded its clean water project, providing access to safe drinking water for 10 more villages in rural areas, improving health and sanitation.",
-    image: gallery_1
-  },
-  {
-    title: "Annual Fundraising Gala Success",
-    content: "Sonch's annual fundraising gala raised record amounts to support ongoing projects and launch new initiatives for community development and environmental conservation.",
+    title: "Launched Multiple Digital Literacy Centre",
+    content: "NGO Soch, in collaboration with Capgemini, promotes digital literacy in Bihar's Arwal district to empower marginalized communities. Operating digital literacy centers, the initiative has educated many and bridged the digital divide. As stated, “सेंटर के माध्यम से सोच संस्था काफी लोगों के शिक्षित कर चुकी है,” highlighting its continuous efforts to uplift society through education and skill development.",
     image: gallery_2
   }
+
 ];
 
 const Readmore = () => {

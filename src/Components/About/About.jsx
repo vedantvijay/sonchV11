@@ -5,7 +5,7 @@ import ashwini from '../../assets/Ashwini Singh profpic.jpeg'
 import ritesh from '../../assets/Ritesh_Chandra_profpic.png'
 import mrinalini from '../../assets/Mrinalini profpic.jpeg'
 import santosh from '../../assets/Santosh_Sinha_profpic.jpg'
-import kamleshwar from '../../assets/gallery-1.png'
+import kamleshwar from '../../assets/kamo.png'
 import kanika from '../../assets/gallery-1.png'
 const foundersData = [
   {
@@ -35,7 +35,7 @@ const foundersData = [
     description: "Rural Development Professional with 26+ years of experience in executing varied projects covering the issues of Environment, Joint Forest Management , Watershed Development, Saving & Credit, Citizen Participation and Democratic Local GovernanceProfessional competencies in Policy Advocacy & Lobbying with the National, State Government, Directorates, District Administration & Networks of Elected Representatives. Served as member in various state level committees in Himachal Pradesh such State resource group member for SSA( education for all), steering committee member for sanitation prize for Directorate of urban development, State level member for WASH project -GTZ-WASH and govt H.P and Amendment committee member of Panchayati Raj and Rural Development Directorate."
   }, {
     name: "Kanika Singh",
-    image: kanika,
+    image: "",
     description: "Presently practicing histopathology and cytopathology in Pathology Consultancy services . Had been quality manager of lab for NABL audit. Also associated with Digiscan , a company which promotes and provides digital slides in pathology to undergraduates and post graduates students .Completed my DPB, DNB in pathology from reputed institutes. worked in various private hospital as pathologist. Experience in histopathology, cytopathology and hematology"
   },
 ];

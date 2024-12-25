@@ -90,8 +90,8 @@ export default function Component() {
           <h2>Our Impact</h2>
           <div className="numbers-grid">
             {[
-              { icon: Users, number: "50,000+", label: "People Impacted" },
-              { icon: Calendar, number: "100+", label: "Workshops Conducted" },
+              { icon: Users, number: "10,000+", label: "People Impacted" },
+              { icon: Calendar, number: "50+", label: "Workshops Conducted" },
               { icon: FileText, number: "30+", label: "Success Stories" }
             ].map((item, index) => (
               <div key={index} className="number-item">

@@ -68,10 +68,12 @@ const Home = ({ setPlayState }) => (
   <>
     <Hero />
     
-    <Programs />
+    
     
     <Title subTitle='Gallery' title='Our Journey' />
     <Campus />
+    <Programs />
+    
     <Timeline />
     <Title subTitle='OUR IMPACT' title='What we have achieved' />
     <Testimonials />
