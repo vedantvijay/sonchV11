@@ -75,7 +75,7 @@ const Home = ({ setPlayState }) => (
     <Campus />
 
     <Programs />
-    <Title subTitle='SONCH is a socially driven organization dedicated to empowering individuals and fostering sustainable community development. With a focus on education, skill-building, digital literacy, women empowerment, health, and environmental sustainability, we strive to create opportunities for growth and self-reliance. SONCH works collaboratively to address social challenges, promote equity, and enhance quality of life, guided by the principles of inclusion, dignity, and progress. Through innovative programs and grassroots efforts, we aim to inspire hope and build resilient communities for a better tomorrow.'  />
+    <Title intro='SONCH is a socially driven organization dedicated to empowering individuals and fostering sustainable community development. With a focus on education, skill-building, digital literacy, women empowerment, health, and environmental sustainability, we strive to create opportunities for growth and self-reliance. SONCH works collaboratively to address social challenges, promote equity, and enhance quality of life, guided by the principles of inclusion, dignity, and progress. Through innovative programs and grassroots efforts, we aim to inspire hope and build resilient communities for a better tomorrow.'  />
 
     <Timeline />
     <Title subTitle='OUR IMPACT' title='What we have achieved' />
